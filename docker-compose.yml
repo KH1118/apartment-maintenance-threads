@@ -1,13 +1,13 @@
 services:
-  # PHP
+  # サービス名
   app:
     # コンテナの名前
     container_name: php-apache
     # Dockerfileの場所を指定
-    build: ./app
+    build: ./docker
     # ポート番号
     ports:
       - "8080:80"
     # コンテナとディレクトリを同期
     volumes:
-      - ./app/src:/var/www/html/
+      - ./:/var/www/html/
